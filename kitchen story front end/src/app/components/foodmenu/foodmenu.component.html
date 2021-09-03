@@ -1,0 +1,26 @@
+<div class="container-sm">
+  <div class="form-group"  style="max-width: 550px; margin-left: 130px;">
+      <input type="text" class="form-control mb-4" placeholder="Search"  id="listSearch" [(ngModel)]="keyword" (ngModelChange)="Search()">
+  </div>
+  <div class="card mb-1" style="max-width: 800px;" *ngFor="let fooditem of fooditems | paginate: { itemsPerPage: 3, currentPage: p };">
+    <div class="row no-gutters">
+      <div class="col-sm-5">
+          <img class="card-img imgstyle" src="{{ './assets/images/' + fooditem.image }}" alt="{{fooditem.foodname}}">
+      </div>
+      <div class="col-sm-7">
+        <div class="card-body cardbodystyle">
+          <h5 class="card-title">{{fooditem.foodname}}</h5>
+          <p class="card-text">{{fooditem.price | currency : 'INR'}}</p>
+          <button (click)="addToCart(fooditem)" class="btn btn-primary btn-sm">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="noitemdivstyle" *ngIf="fooditems?.length == 0">
+    <h4>No food items available.</h4> 
+  </div>
+  <br/>
+  <div class="pagctrlstyle">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+</div>

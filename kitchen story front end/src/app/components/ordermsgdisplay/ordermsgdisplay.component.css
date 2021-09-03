@@ -1,0 +1,19 @@
+.divstyle
+{
+    background-color: lightslategrey;
+    height : 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.link
+{
+    float : right;
+    margin-right: 40px;
+    color: whitesmoke;
+}
+
+.display
+{
+    margin-top: 40px;
+}

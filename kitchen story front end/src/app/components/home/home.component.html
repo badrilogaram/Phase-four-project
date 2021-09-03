@@ -1,0 +1,14 @@
+<div class="divstyle">
+    <a class = "link" routerLink="/adminLogin">Admin Login</a></div>
+<br/>
+<div>
+    <div>
+        <a class="cartstyle" routerLink="/cartdetails">
+            <span><i class="fas fa-shopping-cart"></i>&nbsp;View Cart</span><br/>
+            <span>{{ totalQuantity }} item</span>&nbsp; 
+            <span>|</span>&nbsp; 
+            <span>Total : {{ totalPrice | currency: 'INR' }}</span> 
+        </a>  
+    </div>
+    <app-foodmenu></app-foodmenu>
+</div>

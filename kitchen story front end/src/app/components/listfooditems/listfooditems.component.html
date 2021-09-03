@@ -1,0 +1,24 @@
+<div class="table-responsive-sm tablealign alignstyle">
+    <h3 class="textstyle">List of Food Items</h3>
+<table class="table table-bordered table-hover" >
+    <thead class="thead-light">
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let fooditem of fooditems | paginate: { itemsPerPage: 5, currentPage: p };">
+       <!--  <th scope="row">{{el.id}}</th> -->
+        <td>{{fooditem.foodId}}</td>
+        <td>{{fooditem.foodname}}</td>
+        <td>{{fooditem.price | currency : 'INR' }}</td>
+        <td>{{fooditem.image}}</td>
+        <td>{{fooditem.foodstatus}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br/>
+  <div class="pagctrlstyle">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+  </div>

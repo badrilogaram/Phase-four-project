@@ -1,0 +1,50 @@
+<div class="divstyle">
+  <a class = "link" routerLink="/home">Home</a>
+</div>
+<br/>
+ 
+<div class="container-sm">
+  <div *ngIf="cartItems?.length != 0">
+  <h3>Your Cart Items</h3>
+</div>
+  <div class="card mb-1" style="max-width: 800px;" *ngFor="let cartitem of cartItems">
+   
+    <div class="row no-gutters">
+       
+      <div class="col-sm-4">
+        <img class="card-img imgstyle" src="{{ './assets/images/' + cartitem.imageUrl }}" alt="{{cartitem.name}}">
+      </div>
+
+      <div class="col-sm-5">
+        <div class="card-body cardbodystyle">
+          <h5 class="card-title">{{cartitem.name}}</h5>
+          <p class="card-text">{{cartitem.unitPrice | currency : 'INR'}}</p>
+        </div>
+      </div>
+
+      <div class="col-sm-2 counterstyle">
+        <button (click)="incrementQuantity(cartitem)" class="btn btn-primary btn-sm">
+          <i class="fas fa-plus"></i>
+        </button>&nbsp;&nbsp;  
+        <span>{{ cartitem.quantity }}</span>&nbsp;&nbsp;  
+        <button (click)="decrementQuantity(cartitem)" class="btn btn-primary btn-sm">
+          <i class="fas fa-minus"></i>
+        </button>
+      </div>
+
+      <div class="col-sm-1">
+        <button class = "trashstyle" (click)="remove(cartitem)" class="btn btn-lg"><i class="fas fa-trash-alt movestyle"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class = "moveorderdiv" style="max-width: 400px;" *ngIf="cartItems?.length != 0">
+    <p>Total Items: {{ totalQuantity }}</p>
+    <p>Total Price: {{ totalPrice | currency: 'INR' }}</p>
+  </div>
+  <div *ngIf="cartItems?.length != 0">
+    <a class = "orderstyle" routerLink="/checkout">CheckOut</a>
+  </div>
+  <div class="noitemdivstyle" *ngIf="cartItems?.length == 0">
+    <h4>Your cart is empty !!</h4> 
+  </div>
+</div>

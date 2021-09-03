@@ -1,0 +1,32 @@
+.alignstyle
+{
+    margin:0 auto;
+    width:1000px;
+}
+
+table.table-bordered{
+    border:1px solid darkslategrey;
+    margin-top:10px;
+  }
+table.table-bordered > thead > tr > th{
+    border:1px solid darkslategrey;
+}
+table.table-bordered > tbody > tr > td{
+    border:1px solid darkslategrey;
+}
+
+table .thead-light th 
+{
+    color:black;
+    background-color: lightsteelblue;
+}
+
+.textstyle
+{
+   margin-top: 30px;
+}
+
+.pagctrlstyle
+{
+    margin-left:320px;
+}

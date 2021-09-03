@@ -1,0 +1,32 @@
+.divstyle
+{
+    background-color: lightslategrey;
+    height : 30px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.link
+{
+    float : right;
+    margin-right: 40px;
+    color: whitesmoke;
+}
+
+
+a.cartstyle:link,a.cartstyle:visited
+{
+    float : right;
+    background-color: #3377FF;
+	color: white;
+	padding: 15px 25px;
+	text-align: center;
+    text-decoration: none;
+	border-radius: 25px;
+    margin-right: 40px;
+}
+a.cartstyle:hover, a.cartstyle:active {
+	background-color:dodgerblue;
+    font-weight: bold;
+}
+

@@ -1,0 +1,17 @@
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" routerLink = '/adminDashboard/listfooditem' routerLinkActive="active">List of FoodItems</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink = '/adminDashboard/addfooditem' routerLinkActive="active">Add new FoodItem</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink = '/adminDashboard/removefooditem' routerLinkActive="active">Remove FoodItem</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink = '/adminDashboard/changepwd' routerLinkActive="active">Change Password</a></li>
+      </ul>
+      <a class= "alignright" routerLink = '/home'>Log Out</a>
+    </div>
+</nav>
+<router-outlet></router-outlet>

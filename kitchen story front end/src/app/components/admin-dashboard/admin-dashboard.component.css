@@ -1,0 +1,20 @@
+.listbar
+{
+  display: inline-block;
+
+}
+
+.tablealign
+{
+  align-content: center;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.alignright
+{
+  margin-right: 30px;
+  margin-left: 850px;
+  float:right;
+}

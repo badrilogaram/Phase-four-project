@@ -1,0 +1,23 @@
+<div class="table-responsive-sm divstyle">
+    <br/>
+    <h3 class= "textstyle">Remove a Food Item</h3>
+    <table class="table  table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fooditem of fooditems | paginate: { itemsPerPage: 5, currentPage: p };">
+                <td>{{fooditem.foodId}}</td>
+                <td>{{fooditem.foodname}}</td>
+                <td>{{fooditem.price | currency : 'INR' }}</td>
+                <td><button class="btn btn-secondary mr-2" (click)="removefooditem(fooditem)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+    <div class="pagctrlstyle">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+</div>
